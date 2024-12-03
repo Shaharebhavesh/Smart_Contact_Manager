@@ -1,0 +1,47 @@
+
+
+<!doctype html>
+  <html lang="en" xmlns:th="http://www.thymeLeaf.org" th:replace="normal/base::layout(~{::section})"> 
+
+<head>
+	<meta charset="UTF-8" />
+	<title>This is Home Page</title>
+</head>
+<body>
+		<section>
+
+			<div class="container">
+			
+			<div class="card">
+			
+			<div class="card-body">
+			
+			<div class="container text-center">
+			 <img src="" style= "height: 200px; width: 200px;"  class="my_profile_picture" th:src="@{'/img/contact_logo1.png'}" alt="profile photo" />
+		</div>
+			
+			<h1 class="text-center mt-3 text-secondary ">
+			Add Your Contact..
+			</h1>
+			
+			<!--  <button class="btn btn-primary mt-3 btn-block text-uppercase">Add New Contact</button>
+			-->
+			<div class="d-flex justify-content-center mt-3">
+    <a th:href="@{/user/add-contact}" class="btn btn-primary btn-block text-uppercase" style="max-width: 300px;">Add New Contact</a>
+			</div>
+			
+			</div>
+			
+			</div>
+			
+			</div>
+
+		</section>
+</body>	
+</html>
+
+
+
+
+ 
+ 

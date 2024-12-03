@@ -1,0 +1,177 @@
+
+
+<!doctype html>
+  <html lang="en" xmlns:th="http://www.thymeLeaf.org" th:replace="normal/base::layout(~{::section})"> 
+
+<head>
+	<meta charset="UTF-8" />
+	<title>This is Home Page</title>
+</head>
+<body>
+
+
+		<section>
+		<div class="card mr-2 ml-2">
+		<div class="card-body addContact">
+		<h1 class="text-center">Add Contact</h1>
+		
+		<div class="container-fluid mt-1">
+		<div class="row">
+		<div class="col-md-9 offset-md-2">
+		
+		<form action="#"
+		th:object="${contact}" 
+		enctype="multipart/form-data"	
+		method="POST"	
+		th:action="@{/user/process-contact}"
+		class="mt-2"		
+		>
+		
+		<!-- first name -->
+		<div class="input-group">
+		
+		<div class="input-group-prepend">
+		
+		<div class="input-group-text mr-3">
+		
+		<i class="fa fa-plus"></i>	
+		
+		</div>
+		
+		</div>
+		<input   type="text" id="firstName" name="name" placeholder="Enter Name Here" class="form-control"/>
+		<br><div id="myname" style="display: none; color: red">Please enter firstname!</div>
+		</div>
+		
+		<!-- Second Name -->
+		<div class="input-group mt-3">
+		
+		<div class="input-group-prepend">
+		
+		<div class="input-group-text mr-3">
+		
+		<i class="fas fa-user-alt"></i>	
+		
+		</div>
+		
+		</div>
+		<input type="text" id="SecondName" name="secondName" placeholder="Enter Second Name" class="form-control"/>
+		
+		</div>
+		
+		<!--Phone Field  -->
+		<div class="input-group mt-3 ">
+		
+		<div class="input-group-prepend">
+		
+		<div class="input-group-text mr-3">
+		
+		<i class="fa fa-phone"></i>	
+		
+		</div>
+		
+		</div>
+		<input required  type="number" id="phone" name="phone" placeholder="Enter Phone Number" class="form-control"/>
+		
+		</div>
+		
+		<!-- Email -->
+		<div class="input-group mt-3">
+		
+		<div class="input-group-prepend">
+		
+		<div class="input-group-text mr-3">
+		
+		@
+		
+		</div>
+		
+		</div>
+		<input required type="text" id="email" name="email" placeholder="Enter Email " class="form-control"/>
+		
+		</div>
+		
+		<!-- Work Field -->
+		<div class="input-group mt-3">
+		
+		<div class="input-group-prepend">
+		
+		<div class="input-group-text mr-3">
+		
+		<i class="fa fa-briefcase"></i>	
+		
+		</div>
+		
+		</div>
+		<input type="text" id="work" name="work" placeholder="Enter Work Here" class="form-control"/>
+		
+		</div>
+		
+		<!-- Description -->
+		<div class="form-group mt-3">
+				<textarea placeholder="Enter Contact description" name="description" id="description" rows="9" class="form-control"></textarea>
+		
+		</div>
+		
+		<!-- Contact Image -->
+		<div class="custom-file mt-3">
+		<input type="file" class="profileImage"  name="profileImage" />
+		</div>
+		
+		<!-- button -->
+		<div class="container text-center">
+		<button class="btn btn-outline-primary btnSave">Save Contact</button>
+		</div>
+		</form>
+		
+		</div>
+		
+		</div>
+		
+		</div>
+		
+		</div>
+		</div>
+		  
+		<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+		 <script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>
+		
+		
+		<!-- /// 
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+		$(document).ready(function(){
+	        $(".btnSave").on('click', function(event){
+	            var firstname = $("#firstName").val();
+	            if(firstname == ""){
+	                $("#myname").show().text("Please enter firstname!");
+	                event.preventDefault(); // Prevent form submission
+	            } else {
+	                $("#myname").hide();
+	            }
+				});
+				
+				
+					
+				//$("#firstName").keyup(function(){
+				//console.log($(this).val());
+					
+					//$("#myname").text("My firstname is: "+$(this).val());
+				//});
+			});
+		</script>-->
+		
+		</section>
+		
+</body>	
+</html>
+
+
+
+
+ 
+ 
